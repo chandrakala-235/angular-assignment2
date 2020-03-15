@@ -106,7 +106,7 @@ td {
   position: relative;
   bottom: 10px;
 }
-.button:hover , .addButton:hover{
+.hoverbutton:hover , .addButton:hover{
   background: rgb(211, 152, 75);
   opacity: .9;
 }

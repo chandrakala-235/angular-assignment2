@@ -6,7 +6,7 @@
 <div class="outerBox" id = "outer"> 
   <h1 class = "heading color">What's there in ur mind </h1>
   <button id= "showButton" class = "button showColor" [disabled] = "isDisabled" (click)= "showLatestInput()"> Show Latest</button><br><br>
-  <button class = "button" (click) = "removeAll()"> Remove All </button><br><br>
+  <button class = "button hoverbutton" (click) = "removeAll()"> Remove All </button><br><br>
   <div id="custom_model" class="alert hide">
     <h1>A Custom Modal!</h1>
     <p>{{latestInput}}</p>
@@ -16,14 +16,14 @@
     <tr *ngFor = "let input of inputStored" class = "color"> 
       <td>{{input}} </td>
       <td>
-        <button class="button" (click) = "remove(input)">
+        <button class="button hoverbutton" (click) = "remove(input)">
           Remove
           </button>
       </td>
     </tr>
   </table>
   <div class="innerBox">
-    <input type = "text" class = "input" placeholder = "Enter Value" (keyup)="storeValue($event)" [value] = inputValue>
+    <input type = "text" class = "input" placeholder = "Enter Value" (keyup)="storeValue($event)" [value] = inputValue required>
     <button class="addButton" (click)="add()">ADD</button>
   </div>
   

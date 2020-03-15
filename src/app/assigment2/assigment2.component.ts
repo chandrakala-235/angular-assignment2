@@ -24,9 +24,11 @@ export class Assigment2Component implements OnInit {
      var element = document.getElementById('showButton');
      if (!this.isDisabled) {
         element.classList.remove("showColor");
+        element.classList.add("hoverbutton");
      }
      else {
         element.classList.add("showColor");
+        element.classList.remove("hoverbutton");
      }
   }
   add() {
