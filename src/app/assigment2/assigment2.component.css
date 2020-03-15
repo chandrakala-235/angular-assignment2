@@ -108,7 +108,7 @@ td {
 }
 .hoverbutton:hover , .addButton:hover{
   background: rgb(211, 152, 75);
-  opacity: .9;
+  opacity: .6;
 }
 .showColor {
   background: rgb(201, 185, 165);
