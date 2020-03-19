@@ -49,8 +49,9 @@
   font-weight: bolder;
   border-bottom: 6px solid rgb(151, 90, 207);
 }
-.removeButton {
-  position: relative;
+li .removeButton {
+  position: absolute;
+  left: 80%;
   color : rgb(189, 189, 211);
   font-size: 20px;
   font-family: 'Times New Roman', Times, serif;
@@ -126,9 +127,20 @@
   font-family: 'Times New Roman', Times, serif;
   font-weight: 500;
   color : rgb(189, 189, 211);
-  text-align: center;
+  text-align: left;
   left: 20px;
   top: 10px;
+}
+.textCenter {
+  text-align: center;
+  margin-top: 12px;
+}
+.errorMsg {
+  text-align: left;
+  margin:0px;
+  margin-bottom:2px;
+  font-size: 20px;
+  color : rgb(189, 189, 211);
 }
 .RemoveAllButton {
   position: relative;

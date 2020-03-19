@@ -12,7 +12,7 @@
       <button class = "RemoveAllButton hover" (click) = "removeAll()"> Remove All </button>
     </div>
 
-    <h6 class="textStyle " *ngIf = "isDisabled">Please add an option to get started! </h6>
+    <h6 class="textStyle textCenter" *ngIf = "isDisabled">Please add an option to get started! </h6>
     <ol>
       <li *ngFor = "let input of inputStored" class = "text">
         {{input}} <button class="removeButton hover" (click) = "remove(input)">
@@ -21,6 +21,7 @@
       </li>
     </ol>
     <hr>
+    <p class="errorMsg" *ngIf = "showError">Enter valid value to add item. </p>
     <input type = "text" class = "input" placeholder = "Enter Value" (keyup)="storeValue($event)" [value] = inputValue required>
     <button class="addButton hover" (click)="add()">Add Option</button>
   

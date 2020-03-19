@@ -11,6 +11,7 @@ export class Assigment2Component implements OnInit {
   latestInput : number;
   isDisabled : boolean = true;
   showModel :boolean = false;
+  showError :boolean = false;
 
   constructor() { }
 
@@ -37,7 +38,11 @@ export class Assigment2Component implements OnInit {
       this.inputStored.push(this.inputValue);
       this.inputValue = null;
       this.settingDisableValue(false);
+      this.showError = false;
      }
+    else {
+      this.showError = true;
+    }
   }
   remove(input) {
     if (input) {
