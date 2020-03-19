@@ -1,74 +1,85 @@
+.body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #cdcdb1;
+  padding-bottom: 28px;
+  opacity: 1;
+}
 .header {
   position: absolute;
   width:100%;
-  height:150px;
+  height:110px;
   padding: 0;
   left:0%;
+  top:0px;
   background: black;
-}
-.left_align {
-  left: 30px;
-}
-.left_align35 {
-  left :35px;
 }
 .heading {
   position: relative;
   font-family: 'Times New Roman', Times, serif;
   font-size: 40px;
   color: white;
-  text-align: center;
+  left: 30%;
   top: 5px;
 }
 
 .subheading {
   position: relative;
   font-size: 20px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  color: wheat;
-  text-align: center;
-}
-.button {
-  position: relative;
-  width: 150px;
-  height: 50px;
+  left: 32%;
   top: 0px;
-  left: 200px;
+  padding : 0%;
+  margin: -28px;
+  font-family: 'Times New Roman', Times, serif;
+  color: blueviolet;
+  font-weight: 100;
+}
+.showButton {
+  position: relative;
+  width: 600px;
+  height: 80px;
+  left: 30%;
+  top: 120px;
   align-content: center;
   align-items: center;
-  background:  rgb(105, 64, 9);
+  background: blueviolet;;
   color: white;
+  font-size: 30px;
+  font-weight: bolder;
+  border-bottom: 6px solid rgb(151, 90, 207);
+}
+.removeButton {
+  position: relative;
+  color : rgb(189, 189, 211);
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight:  bold;
+  float: right;
+  margin-right: 0px;
+  background: grey;
+  border: 0px solid grey;
+  
 }
 .outerBox {
   position: relative;
   width: 600px;
-  height: 400px;
-  background: blanchedalmond;
-  left: 100px;
-  top: 160px;
-  align-content: center;
-  align-items: center;
-}
-.innerBox {
-  position: relative;
-  width: 500px;
-  height: 150px;
-  left: 50px;
-  background: black;
-  align-items: center;
-  align-content: center;
-  top: 0px;
+  background: grey;
+  left: 30%;
+  top: 90px;
 }
 .input {
   position: relative;
   left:30px;
-  width: 300px;
+  width: 420px;
   height: 50px;
-  top: 30px;
+  top: 0px;
+  margin-bottom: 10px;
   text-align: center;
-}
-.color {
-  color: black;
+  background: rgb(66, 63, 63);
+  border-bottom: 6px solid black;
+  font-size: 20px;
+  color: whitesmoke;
 }
 .hide {
   display: none;
@@ -76,40 +87,91 @@
 .show {
   display: block;
 }
-.alert {
-  position: absolute;
-  top: 0px;
-  left: 50px;
-  width: 100px;
-  height: 100px;
-  background: black;
-  opacity:1;
-}
 .addButton {
   position: relative;
-  top: 30px;
-  left: 60px;
-  right: 0px;
-  width: 100px;
+  top: 0px;
+  float: right;
+  width: 120px;
   height: 50px;
   align-content: center;
+  background: blueviolet;;
   color: white;
-  background : rgb(105,65,9);
+  font-size: 20px;
+  font-weight: lighter;
+  border : 0x solid blueviolet;
+  border-bottom: 6px solid rgb(151, 90, 207);
 }
-.table {
-  position: relative;
-  left: 120px;
-  top: 2px;
-  bottom: 50px;
-}
-td {
-  position: relative;
-  bottom: 10px;
-}
-.hoverbutton:hover , .addButton:hover{
-  background: rgb(211, 152, 75);
+.addButton:hover {
+  background: rgb(203, 63, 236);
   opacity: 0.9;
 }
+.hover:hover {
+   cursor:  grab;
+}
 .showColor {
-  background: rgb(201, 185, 165);
+  background: rgb(203, 167, 236);
+}
+.innerBoxHeader {
+  position: relative;
+  width:100%;
+  height:50px;
+  padding: 0;
+  left: 0px;
+  top: 0px;
+  background: rgb(66, 63, 63);
+}
+.textStyle {
+  position: relative;
+  font-size: 22px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 500;
+  color : rgb(189, 189, 211);
+  text-align: center;
+  left: 20px;
+  top: 10px;
+}
+.RemoveAllButton {
+  position: relative;
+  color : rgb(189, 189, 211);
+  top: -65px;
+  font-size: 20px; 
+  font-weight: 500;
+  float: right;
+  background: rgb(66, 63, 63);
+  border: 0px solid rgb(66, 63, 63);
+}
+.text {
+  position: relative;
+  color: whitesmoke;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight:  bold;
+  top : 10px;
+  left :10px;
+  padding-bottom: 40px;
+}
+.modal {
+  opacity: 1;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  width: 300px;; 
+  height: 250px; 
+  background-color: #303030;
+  text-align: center;
+  z-index: 100;
+  color: white;
+}
+.modal h6 {
+  font-size: 20px;
+}
+.modal button {
+  font-size: 20px;
+  padding: 10px;
+  width: 80%;
+  background-color: #9932CC;
+  border: none;
+  border-bottom: 6px solid #663399;
+  color: white;
+  font-weight: 700;
 }

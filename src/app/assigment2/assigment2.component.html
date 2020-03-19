@@ -1,30 +1,33 @@
+<div class="body" id = "body">
 <div class = "header">
-  <h1 class="heading left_align"> Things to Do</h1>
-  <h3 class = "subheading left_align35">select the one</h3>
+  <h1 class="heading"> Indecision</h1>
+  <h6 class = "subheading">Put your life in the hands of a computer.</h6>
 </div>
 
-<div class="outerBox" id = "outer"> 
-  <h1 class = "heading color">What's there in ur mind </h1>
-  <button id= "showButton" class = "button showColor" [disabled] = "isDisabled" (click)= "showLatestInput()"> Show Latest</button><br><br>
-  <button class = "button hoverbutton" (click) = "removeAll()"> Remove All </button><br><br>
-  <div id="custom_model" class="alert hide">
-    <h1>A Custom Modal!</h1>
-    <p>{{latestInput}}</p>
-    <button (click) = closeModel()>Close</button>
-  </div>
-  <table class = "table">
-    <tr *ngFor = "let input of inputStored" class = "color"> 
-      <td>{{input}} </td>
-      <td>
-        <button class="button hoverbutton" (click) = "remove(input)">
-          Remove
+<!-- What should i do button -->
+  <button id= "showButton" class = "showButton showColor" [disabled] = "isDisabled" (click)= "showLatestInput()"> What Should I Do?</button><br><br>
+  <div class="outerBox" id = "outer"> 
+    <div class = "innerBoxHeader" >
+      <h6 class="textStyle">Your Options</h6>
+      <button class = "RemoveAllButton hover" (click) = "removeAll()"> Remove All </button>
+    </div>
+
+    <h6 class="textStyle " *ngIf = "isDisabled">Please add an option to get started! </h6>
+    <ol>
+      <li *ngFor = "let input of inputStored" class = "text">
+        {{input}} <button class="removeButton hover" (click) = "remove(input)">
+            Remove
           </button>
-      </td>
-    </tr>
-  </table>
-  <div class="innerBox">
+      </li>
+    </ol>
+    <hr>
     <input type = "text" class = "input" placeholder = "Enter Value" (keyup)="storeValue($event)" [value] = inputValue required>
-    <button class="addButton" (click)="add()">ADD</button>
-  </div>
+    <button class="addButton hover" (click)="add()">Add Option</button>
   
+  </div>
+</div>
+<div class = "modal" *ngIf = "showModel">
+  <h3>Selected Option</h3>
+  <h6> {{latestInput}} </h6>
+  <button (click) = closeModel()>Okay</button>
 </div>
