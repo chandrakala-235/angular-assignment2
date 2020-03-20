@@ -76,7 +76,8 @@ export class Assigment2Component implements OnInit {
 
   showLatestInput() {
     var len = this.inputStored.length;
-    this.latestInput = this.inputStored[len-1];
+    var len1 = Math.floor(Math.random() * len);
+    this.latestInput = this.inputStored[len1];
     document.getElementById("body").style.opacity = "0.2";
     this.showModel = true;
   }
