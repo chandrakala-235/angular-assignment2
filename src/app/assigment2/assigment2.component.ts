@@ -12,6 +12,7 @@ export class Assigment2Component implements OnInit {
   isDisabled : boolean = true;
   showModel :boolean = false;
   showError :boolean = false;
+  duplicateError :boolean = false;
 
   constructor() { }
 
@@ -33,16 +34,33 @@ export class Assigment2Component implements OnInit {
         element.classList.remove("hover");
      }
   }
+
+  duplicateErrorMethod(): boolean {
+    var index = this.inputStored.indexOf(this.inputValue);
+    if (index > -1) {
+      this.duplicateError = true;
+      this.showError = false;
+    }
+    else {
+      this.showError = false;
+      this.duplicateError = false;
+    }
+    return this.duplicateError;
+  }
+
   add() {
-    if(this.inputValue) {
+    if(this.inputValue && !this.duplicateErrorMethod()) {
       this.inputStored.push(this.inputValue);
       this.inputValue = null;
       this.settingDisableValue(false);
       this.showError = false;
+      this.duplicateError = false;
      }
-    else {
+    else if (!this.inputValue){
       this.showError = true;
+      this.duplicateError = false;
     }
+    
   }
   remove(input) {
     if (input) {

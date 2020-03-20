@@ -22,6 +22,7 @@
     </ol>
     <hr>
     <p class="errorMsg" *ngIf = "showError">Enter valid value to add item. </p>
+    <p class="errorMsg" *ngIf = "duplicateError">The item already exists. </p>
     <input type = "text" class = "input" placeholder = "Enter Value" (keyup)="storeValue($event)" [value] = inputValue required>
     <button class="addButton hover" (click)="add()">Add Option</button>
   
