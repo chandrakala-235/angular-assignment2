@@ -5,7 +5,8 @@
 </div>
 
 <!-- What should i do button -->
-  <button id= "showButton" class = "showButton showColor" [disabled] = "isDisabled" (click)= "showLatestInput()"> What Should I Do?</button><br><br>
+  <button id= "showButton" class = "showButton" [ngClass]="{'showColor': isDisabled,'hover':!isDisabled}"
+[disabled] = "isDisabled" (click)= "showLatestInput()"> What Should I Do?</button><br><br>
   <div class="outerBox" id = "outer"> 
     <div class = "innerBoxHeader" >
       <h6 class="textStyle">Your Options</h6>

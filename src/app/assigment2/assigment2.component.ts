@@ -23,16 +23,6 @@ export class Assigment2Component implements OnInit {
   }
   settingDisableValue(isDisabled) {
      this.isDisabled  = isDisabled;
-     var element = document.getElementById('showButton');
-     if (!this.isDisabled) {
-        element.classList.remove("showColor");
-        element.classList.add("hover");
-
-     }
-     else {
-        element.classList.add("showColor");
-        element.classList.remove("hover");
-     }
   }
 
   duplicateErrorMethod(): boolean {

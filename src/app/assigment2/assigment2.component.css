@@ -1,5 +1,5 @@
 .body {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   background-color: #cdcdb1;
@@ -112,6 +112,7 @@ li .removeButton {
 .showColor {
   background: rgb(203, 167, 236);
 }
+
 .innerBoxHeader {
   position: relative;
   width:100%;
